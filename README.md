@@ -59,7 +59,7 @@ Proyecto desarrollado de manera individual.
 - Validación académica con el cliente.
 
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```
 README.md
@@ -72,6 +72,6 @@ docs/
 
 ---
 
-## 📌 Estado del Proyecto
+## Estado del Proyecto
 
 En fase de levantamiento y documentación de requerimientos.
