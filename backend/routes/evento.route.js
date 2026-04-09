@@ -16,7 +16,8 @@ router.post("/", async (req, res) => {
 // Obtener todos los eventos GET
 router.get("/", async (req, res) => {
     try {
-        const eventos = await Evento.find();
+        const filtros = req.query;
+        const eventos = await Evento.find(filtros);
         res.json(eventos);
     } catch (error) {
         res.status(500).json({ error: error.message });

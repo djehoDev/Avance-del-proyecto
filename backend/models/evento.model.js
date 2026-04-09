@@ -3,20 +3,25 @@ const mongoose = require("mongoose");
 const eventoSchema = new mongoose.Schema({
     titulo: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     descripcion: {
-        type: String
+        type: String,
+        trim: true
     },
     fecha: {
         type: Date,
         required: true
     },
     ubicacion: {
-        type: String
+        type: String,
+        trim: true
     },
     categoria: {
-        type: String
+        type: String,
+        enum: ["Música", "Deporte", "Cultura", "Social"],
+        default: "Social"
     }
 });
 
