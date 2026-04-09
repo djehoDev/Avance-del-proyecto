@@ -8,9 +8,8 @@ require('dotenv').config(); //Se importa el archivo .env para poder utilizar sus
 const app = express(); //Crear una instancia de express
 const PORT = process.env.PORT || 3000; //Usar el puerto indicado en .env o si no se indica usar el puerto 3000
 
-/* ImportaciÃ³n de rutas
-const empleadoRoutes = require("./routes/empleado.route");
-*/
+// ImportaciÃ³n de rutas
+const eventoRoutes = require("./routes/evento.route");
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
 app.use(bodyParser.urlencoded({extended:true}));
@@ -22,9 +21,8 @@ mongoose.connect(process.env.MONGODB_URI)
 .then(()=> console.log('MongoDB Atlas conectado'))
 .catch(error => console.log('OcurriÃ³ un error al conectarse con MongoDB: ', error));
 
-/* Rutas
-app.use("/empleados", empleadoRoutes);
-*/
+// Rutas
+app.use("/eventos", eventoRoutes);
 
 app.get('/', (req,res)=> {
     res.send('Servidor en funcionamiento');
