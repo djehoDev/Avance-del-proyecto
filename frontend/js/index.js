@@ -32,6 +32,10 @@ async function obtenerEventos() {
                 <p><b>Fecha:</b> ${new Date(evento.fecha).toLocaleDateString("es-ES")}</p>
                 <p><b>Ubicación:</b> ${evento.ubicacion || ""}</p>
                 <p><b>Categoría:</b> ${evento.categoria || "Social"}</p>
+
+                <button onclick="eliminarEvento('${evento._id}')">
+                    Eliminar
+                </button>
             `;
 
             lista.appendChild(div);
@@ -75,3 +79,13 @@ document.getElementById("formEvento").addEventListener("submit", async (e) => {
         mostrarMensaje(error.message, "error");
     }
 });
+
+async function eliminarEvento(id) {
+    if (!confirm("¿Seguro que quiere eliminar este evento?")) return;
+
+    await fetch(`${API}/${id}`, {
+        method: "DELETE"
+    });
+
+    obtenerEventos();
+}
