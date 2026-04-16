@@ -1,29 +1,81 @@
 body {
-    font-family: Arial;
-    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
 }
 
-input, button, select {
-    display: block;
-    margin: 5px 0;
-    padding: 8px;
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.evento {
-    border: 1px solid #ccc;
+/* Títulos */
+h1, h2 {
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
     padding: 10px;
-    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
+/* Botones */
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón eliminar */
+.evento button:first-of-type {
+    background-color: #dc3545;
+}
+
+.evento button:first-of-type:hover {
+    background-color: #a71d2a;
+}
+
+/* Tarjetas de eventos */
+.evento {
+    border: 1px solid #ddd;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+/* Mensajes */
 #mensaje {
-    margin: 12px 0;
-    min-height: 1.25rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-#mensaje.success {
-    color: #0f7a2a;
+.success {
+    color: green;
 }
 
-#mensaje.error {
-    color: #b42318;
+.error {
+    color: red;
 }

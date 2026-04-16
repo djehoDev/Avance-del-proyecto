@@ -2,12 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Eventos</title>
+    <title>Gestión de Eventos</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
 
-    <h1>Eventos</h1>
+<body>
+    <div class="container">
+
+    <h1>Gestión de Eventos</h1>
 
     <div id="mensaje" role="status" aria-live="polite"></div>
 
@@ -39,7 +41,7 @@
         <option value="Cultura">Cultura</option>
         <option value="Social">Social</option>
     </select>
-    
+
     <input type="text" id="filtroUbicacion" placeholder="Ubicación">
 
     <button onclick="filtrarEventos()">Filtrar</button>
@@ -51,5 +53,7 @@
     <div id="listaEventos"></div>
 
     <script src="js/index.js"></script>
+
+    </div>
 </body>
 </html>
