@@ -1,77 +1,100 @@
-# Plataforma Web – Sección de Eventos  
-## Política Nacional en Discapacidad
+# Proyecto Fullstack - Plataforma de Eventos
+
+## Descripción
+
+Este proyecto consiste en el desarrollo de una aplicación web fullstack que permite gestionar eventos.  
+Los usuarios pueden crear, visualizar, editar y eliminar eventos, además de filtrarlos por categoría y ubicación.  
+
+El sistema está construido con un backend en Node.js y MongoDB, y un frontend en HTML, CSS y JavaScript puro.
 
 ---
 
-## Descripción del Proyecto
+## Tecnologías utilizadas
 
-En el año 2020 se desarrolló una plataforma web con el objetivo de centralizar información relacionada con la Política Nacional en Discapacidad.  
+### Backend:
+- Node.js  
+- Express  
+- MongoDB Atlas  
+- Mongoose  
+- CORS  
+- Dotenv  
 
-Sin embargo, la versión inicial no contempló una sección dedicada a la gestión y difusión de eventos, lo que limitó su alcance en términos de interacción comunitaria y promoción de actividades.
-
-Este proyecto tiene como objetivo ampliar la funcionalidad existente mediante la implementación de un módulo de eventos que permita a los usuarios:
-
-- Descubrir eventos relacionados con discapacidad.
-- Compartir actividades relevantes.
-- Promover iniciativas comunitarias.
-- Mejorar la difusión de información.
-
-Con esta mejora se busca fortalecer la participación ciudadana y optimizar la comunicación dentro de la comunidad.
-
----
-
-## Objetivo General
-
-Diseñar e implementar una sección de eventos integrada a la plataforma existente, que permita la gestión, visualización y difusión eficiente de actividades relacionadas con la Política Nacional en Discapacidad.
+### Frontend:
+- HTML  
+- CSS  
+- JavaScript (Fetch API)  
 
 ---
 
-## Objetivos Específicos
+## Instalación y configuración
 
-- Permitir la creación y administración de eventos.
-- Facilitar la visualización detallada de información de cada evento.
-- Mejorar la interacción entre usuarios mediante la difusión de actividades.
-- Garantizar accesibilidad y usabilidad acorde al público objetivo.
-
----
-
-## Cliente
-
-Verónica Mora Lezcano.
-
----
-
-## Equipo de Desarrollo
-
-Proyecto desarrollado de manera individual.
-
-- **Nombre del estudiante:** D`Jehovann Dixon Lawrence
-
----
-
-## Alcance del Proyecto
-
-### Incluye:
-
-- Implementación de la sección de eventos.
-- Integración con la plataforma existente.
-- Documentación de requerimientos funcionales y no funcionales.
-- Validación académica con el cliente.
-
-
-## Estructura del Repositorio
-
+Clonar el repositorio:
+```bash
+git clone <URL_DEL_REPOSITORIO>
 ```
-README.md
-requirements/
-    functional-requirements.md
-    non-functional-requirements.md
-docs/
-    minuta-aprobacion.md
+
+Entrar a la carpeta del backend:
+```bash
+cd backend
+```
+
+Instalar dependencias:
+```bash
+npm install
+```
+
+Crear un archivo `.env` en la carpeta backend con el siguiente contenido:
+```env
+MONGODB_URI=tu_url_de_mongodb
+PORT=3000
 ```
 
 ---
 
-## Estado del Proyecto
+## Dependencias
 
-En fase de levantamiento y documentación de requerimientos.
+Las dependencias utilizadas en el proyecto son:
+
+- express  
+- mongoose  
+- cors  
+- dotenv  
+
+Para instalarlas:
+
+```bash
+npm install
+```
+
+---
+
+## Ejecución del proyecto
+
+Iniciar el servidor backend:
+
+```bash
+node index.js
+```
+
+Abrir el frontend:
+
+- Ir a la carpeta `frontend`  
+- Abrir el archivo `index.html` en el navegador  
+
+---
+
+## Funcionalidades
+
+- Crear eventos  
+- Ver lista de eventos  
+- Editar eventos  
+- Eliminar eventos  
+- Filtrar eventos por categoría y ubicación  
+
+---
+
+## Notas
+
+- El backend debe estar en ejecución para que el frontend funcione correctamente.  
+- Se utilizó MongoDB Atlas como base de datos en la nube.  
+- Los filtros se implementan mediante query params en el backend. 
