@@ -132,32 +132,21 @@ function limpiarFiltros() {
 
 function mostrarEventos(eventos) {
     const lista = document.getElementById("listaEventos");
+    const plantilla = document.getElementById("plantillaEvento");
     lista.innerHTML = "";
 
     eventos.forEach(evento => {
-        const div = document.createElement("div");
-        div.classList.add("evento");
-
-        div.innerHTML = `
-            <h3>${evento.titulo}</h3>
-            <p>${evento.descripcion || ""}</p>
-            <p><b>Fecha:</b> ${new Date(evento.fecha).toLocaleDateString("es-ES")}</p>
-            <p><b>Ubicación:</b> ${evento.ubicacion || ""}</p>
-            <p><b>Categoría:</b> ${evento.categoria || "Social"}</p>
-
-            <button onclick="eliminarEvento('${evento._id}')">
-                Eliminar
-            </button>
-
-            <button onclick='editarEvento(${JSON.stringify(evento)})'>
-                Editar
-            </button>
-
-            <button title="Compartir">
-                <i class="fa-solid fa-share-nodes"></i>
-            </button>
-        `;
-
-        lista.appendChild(div);
+        const clone = plantilla.content.cloneNode(true);
+        
+        clone.querySelector(".titulo").textContent = evento.titulo;
+        clone.querySelector(".descripcion").textContent = evento.descripcion || "";
+        clone.querySelector(".fecha").textContent = new Date(evento.fecha).toLocaleDateString("es-ES");
+        clone.querySelector(".ubicacion").textContent = evento.ubicacion || "";
+        clone.querySelector(".categoria").textContent = evento.categoria || "Social";
+        
+        clone.querySelector(".btnEliminar").addEventListener("click", () => eliminarEvento(evento._id));
+        clone.querySelector(".btnEditar").addEventListener("click", () => editarEvento(evento));
+        
+        lista.appendChild(clone);
     });
 }

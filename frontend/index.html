@@ -50,6 +50,21 @@
 
     <hr>
 
+    <template id="plantillaEvento">
+        <div class="evento">
+            <h3 class="titulo"></h3>
+            <p class="descripcion"></p>
+            <p><b>Fecha:</b> <span class="fecha"></span></p>
+            <p><b>Ubicación:</b> <span class="ubicacion"></span></p>
+            <p><b>Categoría:</b> <span class="categoria"></span></p>
+            <button class="btnEliminar">Eliminar</button>
+            <button class="btnEditar">Editar</button>
+            <button class="btnCompartir" title="Compartir">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+    </template>
+
     <!-- Lista -->
     <div id="listaEventos"></div>
 
