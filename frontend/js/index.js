@@ -21,30 +21,7 @@ async function obtenerEventos() {
         }
 
         const data = await res.json();
-        const lista = document.getElementById("listaEventos");
-        lista.innerHTML = "";
-
         mostrarEventos(data.data);
-            const div = document.createElement("div");
-            div.classList.add("evento");
-
-            div.innerHTML = `
-                <h3>${evento.titulo}</h3>
-                <p>${evento.descripcion || ""}</p>
-                <p><b>Fecha:</b> ${new Date(evento.fecha).toLocaleDateString("es-ES")}</p>
-                <p><b>Ubicación:</b> ${evento.ubicacion || ""}</p>
-                <p><b>Categoría:</b> ${evento.categoria || "Social"}</p>
-
-                <button onclick="eliminarEvento('${evento._id}')">
-                    Eliminar
-                </button>
-
-                <button onclick='editarEvento(${JSON.stringify(evento)})'>
-                    Editar
-                </button>
-            `;
-
-            lista.appendChild(div);
     } catch (error) {
         mostrarMensaje(error.message, "error");
     }
@@ -174,6 +151,10 @@ function mostrarEventos(eventos) {
 
             <button onclick='editarEvento(${JSON.stringify(evento)})'>
                 Editar
+            </button>
+
+            <button title="Compartir">
+                <i class="fa-solid fa-share-nodes"></i>
             </button>
         `;
 

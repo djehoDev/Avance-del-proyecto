@@ -79,3 +79,15 @@ button:hover {
 .error {
     color: red;
 }
+
+.evento button i {
+    pointer-events: none;
+}
+
+.evento button:last-child {
+    background-color: #28a745;
+}
+
+.evento button:last-child:hover {
+    background-color: #1e7e34;
+}
