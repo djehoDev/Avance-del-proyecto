@@ -28,11 +28,6 @@ El sistema está construido con un backend en Node.js y MongoDB, y un frontend e
 
 ## Instalación y configuración
 
-Clonar el repositorio:
-```bash
-git clone <URL_DEL_REPOSITORIO>
-```
-
 Entrar a la carpeta del backend:
 ```bash
 cd backend
@@ -41,12 +36,6 @@ cd backend
 Instalar dependencias:
 ```bash
 npm install
-```
-
-Crear un archivo `.env` en la carpeta backend con el siguiente contenido:
-```env
-MONGODB_URI=tu_url_de_mongodb
-PORT=3000
 ```
 
 ---
